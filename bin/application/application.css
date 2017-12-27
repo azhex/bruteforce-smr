@@ -1,0 +1,45 @@
+.log-area {
+    -fx-text-fill: #0f0;
+    -fx-border-width: 1 1 0 1;
+    -fx-border-color: #2E2E2E;
+    -fx-background-image: url("/res/logBg.png");
+}
+
+.log-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.log-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.log-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+.log-area .content {
+    -fx-background-color: transparent;
+}
+
+.options-area {
+    -fx-text-fill: #0f0;
+    -fx-border-width: 1 1 0 0;
+    -fx-border-color: #2E2E2E;
+}
+
+.principal {
+	-fx-border-color: #000000;
+	-fx-border-width: 2;
+}
+
+.progress-bar { 
+	-fx-accent: #2EFE2E;
+}
+
+.progress-bar .track {
+    -fx-background-radius: 0;
+    -fx-background-color: #2E2E2E;
+    -fx-border-width: 2 2 2 1;
+    -fx-border-color:rgb(0,0,0);
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="628.0" prefWidth="893.0" styleClass="principal" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainControl">
+   <center>
+      <TextArea fx:id="txtLog" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="log-area" stylesheets="@application.css" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <VBox prefHeight="87.0" prefWidth="764.0" styleClass="control" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="9.0" prefWidth="784.0">
+               <children>
+                  <ProgressBar fx:id="progressLoad" prefHeight="18.0" prefWidth="918.0" progress="0.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="143.0" prefWidth="764.0">
+               <children>
+                  <ChoiceBox fx:id="selectDicc" prefHeight="32.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#limpiar" prefHeight="33.0" prefWidth="136.0" text="Limpiar">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnDetener" mnemonicParsing="false" onAction="#detener" prefHeight="33.0" prefWidth="136.0" text="Detener">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#iniciar" prefHeight="33.0" prefWidth="136.0" text="Iniciar">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="889.0" style="-fx-background-image: url(&quot;/res/bannerTitulo.png&quot;);" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="437.0" prefWidth="143.0" styleClass="options-area" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="130.0" text="Opciones" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="inLimitProgress" prefHeight="25.0" promptText="Limite progreso">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <ToggleButton fx:id="btnShowProgress" mnemonicParsing="false" prefWidth="132.0" text="Mostrar progreso">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </ToggleButton>
+            <Separator prefWidth="200.0" />
+            <TextField fx:id="inSavePath" promptText="Ruta archivo">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Button maxWidth="132.0" mnemonicParsing="false" onAction="#confSavePath" text="Seleccionar archivo">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <ToggleButton fx:id="btnSavePasswd" maxWidth="132.0" mnemonicParsing="false" text="Guardar contraseñas">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </ToggleButton>
+            <Separator prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#salir" prefHeight="25.0" prefWidth="132.0" text="Salir" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
